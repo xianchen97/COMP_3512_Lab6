@@ -1,8 +1,8 @@
 #pragma once
 
-class City {
-	char name;
-	int x_coordinates;
-	int y_coordinates;
+class GeneticAlgorithm {
+
+	//contains the mutate method
+	//crossover method
 };
 

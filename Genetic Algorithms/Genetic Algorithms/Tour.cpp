@@ -24,7 +24,7 @@ double Tour::get_tour_distance(Tour city_list)
 	double distance = 0.0;
 	for (i = 0; i < CITIES_IN_TOUR; ++i) {
 		distance +=
-			City::get_distance_between_cities                      // so we create a loop
+			City::get_distance_between_cities                      
 			(city_list.permutation[i], (city_list.permutation[(i + 1) % CITIES_IN_TOUR]));
 	}
 	return distance;

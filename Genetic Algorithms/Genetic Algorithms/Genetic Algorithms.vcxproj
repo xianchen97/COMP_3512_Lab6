@@ -117,6 +117,7 @@
   <ItemGroup>
     <ClInclude Include="City.hpp" />
     <ClInclude Include="GeneticAlgorithm.hpp" />
+    <ClInclude Include="MasterList.hpp" />
     <ClInclude Include="Population.hpp" />
     <ClInclude Include="Tour.hpp" />
   </ItemGroup>

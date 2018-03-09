@@ -6,3 +6,8 @@ double City::get_distance_between_cities(City a, City b)
 		pow((double)(a.y_coordinate - b.y_coordinate), 2.0));
 
 }
+
+void City::swap_cities(int index_one, int index_two, City & permutation)
+{
+
+}

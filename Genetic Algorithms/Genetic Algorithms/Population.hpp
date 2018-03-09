@@ -42,9 +42,6 @@ class Population {
 
 public:
 
-
-	void swap_cities(int index_one, int index_two, City & permutation);
-
 	Tour * select_parents(Tour & population);
 
 	Tour * crossover(Tour & parents);
