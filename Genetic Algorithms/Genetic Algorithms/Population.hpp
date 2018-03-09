@@ -4,7 +4,6 @@
 class Population {
 
 	/* Remember to avoid magic numbers by defining constants */
-	static const int SHUFFLES = 32;  // A shuffle consists of swaps
 
 	static const int  ASCII_OFFSET = 65;    // if we cast an int with value 65
 	// as a char, we get 'A'
@@ -42,8 +41,6 @@ class Population {
 
 
 public:
-
-	void shuffle_cities(City & permutation);
 
 
 	void swap_cities(int index_one, int index_two, City & permutation);

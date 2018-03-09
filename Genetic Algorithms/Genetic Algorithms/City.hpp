@@ -6,5 +6,6 @@ class City {
 	int x_coordinate;
 	int y_coordinate;
 public:	
-	double get_distance_between_cities(City a, City b);
+	static double get_distance_between_cities(City a, City b);
+
 };
