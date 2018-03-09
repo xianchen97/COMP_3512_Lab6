@@ -13,10 +13,8 @@ class Population {
 
 	static const int  MAP_BOUNDARY = 1000;    // Size of the map (X and Y)
 
-	static const int  FITNESS_SCALER = 10000.0;// Scales the fitness to move the
-	// decimal place to a reasonable spot
-
-	static const int  PARENT_POOL_SIZE = 5; // Number of members randomly selected
+	static const int  PARENT_POOL_SIZE = 5;
+	// Number of members randomly selected
 	// from the population, from which the
 	// fittest is made a 'parent'
 
@@ -34,7 +32,7 @@ class Population {
 	double best_iteration_distance = 0.0;
 	double improvement_factor = 0.3;
 
-	/* Declares the pointers to our dynamically allocated memory. */
+	/* Declares the pointers to our statically allocated memory. */
 	static Tour * population ;      // Holds our candidate population
 	static Tour * parents;         // Used during crossover
 	static Tour * crosses;         // Used during calculations
@@ -45,23 +43,18 @@ class Population {
 
 public:
 
-	void shuffle_cities(City * permutation);
+	void shuffle_cities(City & permutation);
 
-	double get_distance_between_cities(City a, City b);
 
-	double get_tour_distance(Tour city_list);
+	void swap_cities(int index_one, int index_two, City & permutation);
 
-	int determine_fitness(Tour * population, int population_size);
+	Tour * select_parents(Tour & population);
 
-	void swap_cities(int index_one, int index_two, City * permutation);
+	Tour * crossover(Tour & parents);
 
-	Tour * select_parents(Tour * population);
+	void mutate(Tour & population);
 
-	Tour * crossover(Tour * parents);
-
-	void mutate(Tour * population);
-
-	int contains_city(Tour * candidate_tour, int length, City * candidate_city);
+	int contains_city(Tour & candidate_tour, int length, City & candidate_city);
 
 
 

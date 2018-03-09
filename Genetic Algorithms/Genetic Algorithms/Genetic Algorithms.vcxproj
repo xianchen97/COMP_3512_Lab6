@@ -120,6 +120,11 @@
     <ClInclude Include="Population.hpp" />
     <ClInclude Include="Tour.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="City.cpp" />
+    <ClCompile Include="Population.cpp" />
+    <ClCompile Include="Tour.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
